@@ -142,13 +142,13 @@
                     class="bg-primary text-white hover:bg-primary-dark transition rounded-lg px-2 sm:px-9 py-1.5 sm:py-4 flex mx-auto sm:mx-0 mt-3 sm:mt-0">View
                     More</button>
             </div>
-            <!-- <RecentProject /> -->
+             <RecentProject />
         </div>
 
         <!-- Hire me -->
         <div class="mt-12">
             <h1 class="text-neutral-900 text-3xl sm:text-5xl text-center font-semibold capitalize">why hire me?</h1>
-            <!-- <Team /> -->
+<!--             <Team />-->
         </div>
 
         <!-- CTA -->

@@ -6,10 +6,10 @@ const navigations = [
     { name: 'Contact', href: '/contact' },
 ]
 
+const route = useRoute()
 const open = ref(false)
 
 const isActive = ref(false)
-
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const isActive = ref(false)
             <a href="/" class="text-xl font-bold block">Portfo-2</a>
             <div class="hidden sm:flex items-center gap-8">
                 <nav v-for="nav in navigations">
-                    <a :href="nav.href" class="text-netural-900 font-bold">{{ nav.name }}</a>
+                    <a :href="nav.href" :class="{'text-primary' : route.fullPath === nav.href}" class="text-netural-900 font-bold">{{ nav.name }}</a>
                 </nav>
             </div>
 
