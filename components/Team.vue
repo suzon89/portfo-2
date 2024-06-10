@@ -1,36 +1,48 @@
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
+import {Swiper, SwiperSlide} from 'swiper/vue';
+import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {Autoplay, Navigation, Pagination} from "swiper";
+const modules = [Autoplay, Navigation, Pagination]
+
+const breakpoints = {
+    320: {
+        slidesPerView: 1,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 10
+    },
+    1536: {
+        slidesPerView: 4,
+        spaceBetween: 30
+    }
+}
 const teams = [
-    { image: '/images/team-member-1.webp', name: 'Communicative', content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ' },
-    { image: '/images/team-member-2.webp', name: '', content: '' },
-    { image: '/images/team-member-3.webp', name: '', content: '' },
-    { image: '/images/team-member-4.webp', name: '', content: '' },
-    { image: '/images/team-member-5.webp', name: '', content: '' }
+    { image: '/images/team-member-1.png', name: 'Communicative', content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ' },
+    { image: '/images/team-member-2.png', name: 'Professional', content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ' },
+    { image: '/images/team-member-3.png', name: 'Collaborative​', content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ' },
+    { image: '/images/team-member-4.png', name: 'Client’s Favourite', content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ' },
+    { image: '/images/team-member-5.png', name: 'Dadicate', content: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ' }
 ]
 </script>
 
 <template>
-    <Swiper :grab-cursor="true" :modules="[SwiperAutoplay, SwiperNavigation, SwiperPagination]" :pagination="{
-        el: '#swiper-pagination',
-        bulletClass: 'swiper-pagination-bullet',
-        bulletActiveClass: 'swiper-pagination-bullet-active',
-    }"  :slides-per-view="4" :loop="true" :effect="'active'" , 
-        :breakpoints="{
-            '640': {
-                slidePerView: 1,
-            },
-            '1024': {
-                slidePerView: 4,
-                spaceBetween: 30
-            }
-    }" :autoplay="{
-        delay: 2000,
-        disableOnInteraction: true,
-    }">
+    <Swiper 
+        :autoplay="true"
+        :breakpoints="breakpoints"
+        :loop="true"
+        :modules="modules"
+        :navigation="false"
+        :pagination="false"
+        :slidesPerView="4"
+        class="mySwiper">
 
         <SwiperSlide v-for="(member, index) in teams" :key="index">
             <div class="mt-12">
-                <div class="w-full h-80 bg-sky-200 rounded-3xl">
+                <div class="aspect-w-3 aspect-h-4 bg-sky-200 rounded-3xl">
                     <img :src="member.image" alt="member" class="w-full h-full object-cover rounded-3xl">
                 </div>
                 <div class="mt-6">

@@ -1,6 +1,25 @@
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import {Swiper, SwiperSlide} from 'swiper/vue';
 import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {Autoplay, Navigation, Pagination} from "swiper";
+const modules = [Autoplay, Navigation, Pagination]
+
+const breakpoints = {
+    320: {
+        slidesPerView: 1,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 10
+    },
+    1536: {
+        slidesPerView: 2,
+        spaceBetween: 30
+    }
+}
 
 const recentProjects = [
     { images: '/images/mobile-app-1.webp', title: 'E-commerce' },
@@ -10,22 +29,14 @@ const recentProjects = [
 </script>
 
 <template>
-    <Swiper :grab-cursor="true" :modules="[SwiperAutoplay, SwiperNavigation, SwiperPagination]" :pagination="{
-        el: '#swiper-pagination',
-        bulletClass: 'swiper-pagination-bullet',
-        bulletActiveClass: 'swiper-pagination-bullet-active',
-    }" :slides-per-view="2" :loop="true" :effect="'active'" , :breakpoints="{
-        640: {
-            slidePerView: 1,
-        },
-        1024: {
-            slidePerView: 2,
-            spaceBetween: 30
-        }
-    }" :autoplay="{
-        delay: 2000,
-        disableOnInteraction: true,
-    }">
+    <Swiper ::autoplay="true"
+        :breakpoints="breakpoints"
+        :loop="true"
+        :modules="modules"
+        :navigation="false"
+        :pagination="false"
+        :slidesPerView="2"
+        class="mySwiper">
 
         <SwiperSlide v-for="(project,index) in recentProjects"  :key="index">
             <div class="mt-10">

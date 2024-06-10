@@ -17,7 +17,7 @@ const freeBies = [
     { images: '/images/freebies-1.webp', name: 'green infographic' },
     { images: '/images/freebies-2.webp', name: 'catagory' },
     { images: '/images/freebies-3.webp', name: 'free items' },
-    { images: '/images/', name: '' },
+    { images: '/images/freebies-4.webp', name: 'giveaway' },
 ]
 const step = ref(1)
 

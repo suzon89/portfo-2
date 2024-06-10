@@ -52,11 +52,8 @@ const isActive = ref(false)
             <!-- Logo -->
             <a href="/" class="text-xl font-bold block">Portfo-2</a>
             <!-- Navbar -->
-            <div class="space-y-4 flex flex-col pt-4">
-                <a href="/" class="text-slate-500/80 font-medium hover:text-neutral-600 transition">Home</a>
-                <a href="/about" class="text-slate-500/80 font-medium hover:text-neutral-600 transition">About</a>
-                <a href="/project" class="text-slate-500/80 font-medium hover:text-neutral-600 transition">Project</a>
-                <a href="/contact" class="text-slate-500/80 font-medium hover:text-neutral-600 transition">Contact</a>
+            <div v-for="nav in navigations" class="space-y-4 flex flex-col pt-4">
+                <a :href="nav.href" :class="{'text-primary' : route.fullPath === nav.href}" class="text-netural-900 font-medium">{{ nav.name }}</a>
             </div>
             <!-- Navbar -->
         </div>

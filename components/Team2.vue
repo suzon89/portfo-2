@@ -1,34 +1,45 @@
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = [Autoplay, Navigation, Pagination]
+
+const breakpoints = {
+    320: {
+        slidesPerView: 1,
+    },
+    640: {
+        slidesPerView: 2,
+        spaceBetween: 10
+    },
+    1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+    },
+    
+}
 
 const teams = [
-    { image: '/images/team-member-1.webp', name: 'Eleanor Pena', position: 'Eleanor Pena' },
-    { image: '/images/team-member-2.webp', name: 'Jane Cooper', position: 'Front End Developer' },
+    { image: '/images/team-member-1.png', name: 'Eleanor Pena', position: 'Eleanor Pena' },
+    { image: '/images/team-member-2.png', name: 'Jane Cooper', position: 'Front End Developer' },
     {
-        image: '/images/team-member-3.webp', name: 'Cody Fisher', position: 'Back End Developer'
+        image: '/images/team-member-3.png', name: 'Cody Fisher', position: 'Back End Developer'
     },
-    { image: '/images/team-member-4.webp', name: 'Corey Anderson', position: 'Full Stack Developer' },
+    { image: '/images/team-member-4.png', name: 'Corey Anderson', position: 'Full Stack Developer' },
 ]
 </script>
 
 <template>
-    <Swiper :grab-cursor="true" :modules="[SwiperAutoplay, SwiperNavigation, SwiperPagination]" :pagination="{
-        el: '#swiper-pagination',
-        bulletClass: 'swiper-pagination-bullet',
-        bulletActiveClass: 'swiper-pagination-bullet-active',
-    }" :slides-per-view="3" :loop="true" :effect="'active'" , :breakpoints="{
-        640: {
-            slidePerView: 1,
-        },
-    }" :autoplay="{
-        delay: 2000,
-        disableOnInteraction: true,
-    }">
+    <Swiper :autoplay="true" :breakpoints="breakpoints" :loop="true" :modules="modules" :navigation="false"
+        :pagination="false" :slidesPerView="3" class="mySwiper">
 
         <SwiperSlide v-for="(member, index) in teams" :key="index">
             <div class="mt-12 flex flex-col justify-center items-center">
-                <div class="w-64 h-64 rounded-full">
-                    <img :src="member.image" alt="member" class="w-full h-full object-cover rounded-full">
+                <div class="bg-neutral-200 w-64 h-64 rounded-full overflow-hidden">
+                    <img :src="member.image" alt="member" class="w-full h-full object-cover">
                 </div>
                 <div class="mt-6">
                     <h3 class="text-2xl text-center font-medium">{{ member.name }}</h3>
@@ -37,7 +48,4 @@ const teams = [
             </div>
         </SwiperSlide>
     </Swiper>
-    <div class="mt-6 sm:mt-12 flex justify-center items-center">
-        <button id="swiper-pagination"></button>
-    </div>
 </template>

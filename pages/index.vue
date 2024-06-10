@@ -4,7 +4,7 @@
 
 <template>
     <AppHeader />
-    <div class="w-full max-w-6xl mx-auto px-10 py-8">
+    <div class="w-full max-w-6xl mx-auto px-5 py-8">
         <!-- Hero section -->
         <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-20 lg:mt-20">
             <div>
@@ -50,10 +50,10 @@
             </div>
 
             <div
-                class="hidden md:block relative after:absolute after:content after:w-[448px] after:h-[448px] xl:after:w-full xl:after:h-full after:border after:border-netural-400 after:rounded-full after:top-0 lg:after:-top-8 after:left-20 lg:after:-left-4 after:-z-10">
+                class="hidden lg:block relative after:absolute after:content after:w-[448px] after:h-[448px] xl:after:w-full xl:after:h-full after:border after:border-netural-400 after:rounded-full after:top-0 lg:after:-top-8 after:left-20 lg:after:-left-4 after:-z-10">
                 <div
-                    class="w-full max-w-md xl:max-w-lg h-[448px] xl:h-[512px] rounded-full bg-rose-300  overflow-hidden flex mx-auto">
-                    <img src="/images/hero-img.webp" alt="hero-img" class="w-full h-full object-contain">
+                    class="aspect-w-5 aspect-h-5 rounded-full bg-rose-300  overflow-hidden flex mx-auto">
+                    <img src="/images/hero-img-2.png" alt="hero-img" class="w-full h-full object-contain">
                 </div>
                 <img src="/images/Bullet-points.png" alt="bullet-point"
                     class="absolute bottom-5 left-32 lg:-left-14 -z-10">
@@ -61,15 +61,15 @@
         </div>
 
         <!-- Review section -->
-        <div class="bg-neutral-100 rounded-3xl p-8 sm:p-4 lg:p-16 md:flex gap-14 mt-10">
+        <div class="bg-neutral-200 rounded-3xl p-8 sm:p-4 lg:p-16 md:flex gap-14 mt-10">
             <div class="bg-rose-300 w-full md:w-[350px] sm:h-[458px] rounded-2xl flex-shrink-0">
-                <img src="/images/hero-img.webp" alt="" class="w-full h-full object-cover  ">
+                <img src="/images/hero-img-1.png" alt="" class="w-full h-full object-cover  ">
             </div>
             <div class="mt-6 md:mt-0">
                 <div class="sm:flex md:block lg:flex justify-center md:justify-start gap-12 items-center text-center">
                     <div>
                         <h4 class="text-4xl sm:text-7xl font-semibold">120<span class="text-green-300">+</span></h4>
-                        <p class="text-neutral-300">Completed Projects</p>
+                        <p class="text-neutral-500">Completed Projects</p>
                     </div>
                     <div class="flex flex-col mt-2">
                         <div class="flex justify-center !items-center gap-2">
@@ -118,7 +118,7 @@
                                 </span>
                             </div>
                         </div>
-                        <p class="text-neutral-300 mt-4">Positive Review’s</p>
+                        <p class="text-neutral-500 mt-4">Positive Review’s</p>
                     </div>
                 </div>
                 <!-- Title & content -->
@@ -142,13 +142,13 @@
                     class="bg-primary text-white hover:bg-primary-dark transition rounded-lg px-2 sm:px-9 py-1.5 sm:py-4 flex mx-auto sm:mx-0 mt-3 sm:mt-0">View
                     More</button>
             </div>
-             <RecentProject />
+            <RecentProject />
         </div>
 
         <!-- Hire me -->
         <div class="mt-12">
             <h1 class="text-neutral-900 text-3xl sm:text-5xl text-center font-semibold capitalize">why hire me?</h1>
-<!--             <Team />-->
+            <Team/>
         </div>
 
         <!-- CTA -->

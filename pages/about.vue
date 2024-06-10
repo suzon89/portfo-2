@@ -6,8 +6,8 @@
     <div class="w-full max-w-6xl mx-auto px-5 py-8">
         <!-- Hero section -->
         <div class="grid md:grid-cols-3 gap-12 lg:gap-24 md:mt-16">
-            <div class="col-span-3 md:col-span-1 bg-rose-300 w-full lg:w-[350px] h-[458px] rounded-2xl overflow-hidden">
-                <img src="/images/hero-img.webp" alt="hero-img" class="w-full h-full object-cover">
+            <div class="col-span-3 md:col-span-1 bg-rose-300 aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden">
+                <img src="/images/about-img.png" alt="hero-img" class="w-full h-full object-cover">
             </div>
 
             <div class="col-span-3 md:col-span-2">
@@ -44,8 +44,8 @@
                 environment - taught me how to balance business goals and engineering constraints as I unrelentingly
                 advocated for the user.</p>
 
-            <div class="mt-12 bg-neutral-200 w-full h-[410px] rounded-3xl overflow-hidden flex mx-auto">
-                <img src="/images/hero-img.webp" alt="" class="w-full h-full object-contain">
+            <div class="mt-12 bg-neutral-300 aspect-w-16 aspect-h-6 rounded-3xl overflow-hidden flex mx-auto">
+                <img src="/images/article-img-2.png" alt="" class="w-full h-full object-contain">
             </div>
 
             <p class="mt-12 md:text-lg text-neutral-700">I graduated from Symbiosis Institute of Design, India with a
@@ -62,25 +62,28 @@
                 Food is my second love and I let my nose guide me to the pleasures of the stomach once every weekend.
             </p>
 
-            <iframe class="w-full h-96 md:h-[660px] object-contain rounded-2xl mt-12" src="https://www.youtube.com/embed/KGUUWufvu6E?si=PwEewPZU1aG7PMWi"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="relative">
+                <video class="w-full aspect-h-6 rounded-3xl mt-12" controls>
+                    <source src="/videos/video.mp4" type="video/mp4">
+                </video>
+                <span class="absolute text-white z-20">How do I work?</span>
+            </div>
         </div>
 
         <!-- Team -->
         <div class="mt-24 border-t-2 border-neutral-200">
             <h1 class="mt-12 text-5xl text-neutral-900 text-center capitalize font-semibold">Our team</h1>
-            <!-- <Team2 /> -->
+            <Team2 />
         </div>
     </div>
 
     <!-- Suggestation -->
     <div class="bg-sky-200 px-4 py-6 md:py-12">
         <div class="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-32">
-            <div>
-                <img src="/images/map.png" alt="map" class="w-full h-full object-cover">
-            </div>
+
+            <iframe class="w-full h-[567px] rounded-3xl" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116833.9730350867!2d90.3372885059841!3d23.780818635686664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1713231686144!5m2!1sen!2sbd">
+            </iframe>
 
             <div>
                 <h2 class="text-3xl sm:text-5xl text-white font-semibold">We’d Love To Hear From You</h2>
