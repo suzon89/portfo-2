@@ -28,7 +28,7 @@
                 <div class="mt-3 flex gap-4 sm:gap-8 justify-center md:justify-start items-center">
                     <img src="/images/adobe-illustrator.png" alt="illustator" class="w-12 h-14 object-cover rounded-lg">
                     <img src="/images/adobe-photoshop.png" alt="" class="w-12 h-14 object-cover rounded-lg">
-                    <img src="/images/Figma.png" alt="" class="w-16 h-14 object-cover rounded-lg">
+                    <img src="/images/figma.png" alt="" class="w-16 h-14 object-cover rounded-lg">
                     <img src="/images/adobe-xd.png" alt="" class="w-12 h-14 object-cover rounded-lg">
                 </div>
             </div>
